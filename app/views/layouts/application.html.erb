@@ -1,14 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>  
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <html>
 <head>
-  <title>Cappys</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <meta charset="utf-8">
+  <title>Cappy's Fine Wine and Spirits</title>
+  <meta name="description" content="Cappy's Fine Wine and Spirits, a liquor store in Valley Stream, Long Island, New York">
+  <link rel="stylesheet" href="assets/application.css">
 </head>
 <body>
 
-<%= yield %>
+  <header>
+    <%= link_to '', :root, :id => 'banner' %>
+    <nav>
+      <ul>
+        <li><%= link_to 'ABOUT US', :root %></li>
+        <li><%= link_to 'LOCATION & HOURS', '/location_and_hours' %></li>
+        <li><%= link_to 'SPECIALS', '/specials' %></li>
+        <li><%= link_to 'EMAIL/ SIGN UP', '/email_sign_up' %></li>
+        <li><%= link_to 'CALENDAR', '/calendar' %></li>
+        <li><%= link_to 'CONTACT US', '/contact_us' %></li>
+      </ul>
+    </nav>
+  </header>
 
+  <div id='container'>
+
+  <%= yield %>
+
+  </div>
 </body>
 </html>

@@ -1,4 +1,13 @@
 Cappys::Application.routes.draw do
+
+  root :to => 'pages#home'
+
+  match '/specials' => 'pages#specials'
+  match '/location_and_hours' => 'pages#location_and_hours'
+  match '/email_sign_up' => 'pages#email_sign_up'
+  match '/calendar' => 'pages#calendar'
+  match '/contact_us' => 'pages#contact_us'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

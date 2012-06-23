@@ -1,4 +1,20 @@
 - rails new cappys -d mysql
+- git init
+- git add .
+- git commit -m 'INSERT MESSAGE'
+- create repo at github
+- git remote add origin git@github.com:jaredcohe/cappys.git
+- git push -u origin master
+- rake db:create:all
+- rails s
+- clean gemfile
+.ensure it has jquery, sass, and maybe haml
+.delete coffee gem
+- routes for root
+.added to routes: root :to => 'resources#index'
+.deleted public/index.html
+
+
 
 
 == Welcome to Rails
