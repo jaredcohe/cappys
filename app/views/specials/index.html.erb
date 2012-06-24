@@ -1,0 +1,25 @@
+<div id='specials'>
+  <div id='left'>
+    <h1>Mailers</h1>
+    <table>
+    <% @specials_mailers.each do |special| %>
+      <tr>
+        <td><%= special.title %></td>
+        <td><%= image_tag special.image.url, :size => '100x100' %></td>
+      </tr>
+    <% end %>
+    </table>
+  </div>
+
+  <div id='right'>
+    <h1>Other</h1>
+    <table>
+    <% @specials_other.each do |special| %>
+      <tr>
+        <td><%= special.title %></td>
+        <td><%= image_tag special.image.url, :size => '100x100' %></td>
+      </tr>
+    <% end %>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<%= form_for @special, :html => { :multipart => true } do |f| %>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :special_type %><br />
+    <%= f.select :special_type, Special.special_types %>
+  </div>
+  <div>
+    <%= f.file_field :image %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

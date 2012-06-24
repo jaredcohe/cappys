@@ -13,7 +13,13 @@
 - routes for root
 .added to routes: root :to => 'resources#index'
 .deleted public/index.html
-
+- add scaffold for Special model
+.rails g scaffold Special title:string type:string
+.rake db:migrate
+- paperclip plugin
+.rails plugin install git://github.com/thoughtbot/paperclip.git
+.rails g paperclip special image
+.add to gemfile - gem "paperclip", :git => "http://github.com/thoughtbot/paperclip.git"
 
 
 

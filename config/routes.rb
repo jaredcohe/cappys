@@ -1,8 +1,11 @@
 Cappys::Application.routes.draw do
 
+  resources :specials
+  get 'admin_specials' => 'specials#admin_specials'
+
   root :to => 'pages#home'
 
-  match '/specials' => 'pages#specials'
+  # match '/specials' => 'pages#specials'
   match '/location_and_hours' => 'pages#location_and_hours'
   match '/email_sign_up' => 'pages#email_sign_up'
   match '/calendar' => 'pages#calendar'

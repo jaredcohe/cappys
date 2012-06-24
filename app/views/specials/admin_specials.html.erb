@@ -1,0 +1,24 @@
+<h1>ADMIN SPECIALS</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Type</th>
+    <th>Image</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @specials.each do |special| %>
+  <tr>
+    <td><%= special.title %></td>
+    <td><%= special.special_type %></td>
+    <td><%= image_tag special.image.url, :size => "100x100" %></td>
+    <td><%= link_to 'Edit', edit_special_path(special) %></td>
+    <td><%= link_to 'Delete', special, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Special', new_special_path %>
