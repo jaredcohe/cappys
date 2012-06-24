@@ -38,4 +38,7 @@ gem 'jquery-rails'
 
 gem "paperclip", :git => "http://github.com/thoughtbot/paperclip.git"
 
-gem 'pg'
+# Gems for Heroku
+group :production do
+  gem 'pg'
+end
